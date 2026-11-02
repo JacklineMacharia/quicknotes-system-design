@@ -1,0 +1,135 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #f4f6f8;
+}
+
+main {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+h1 { margin: 0; }
+
+.subtitle {
+  margin: 0.25rem 0 1.25rem;
+  color: #52606d;
+}
+
+/* Buttons */
+button {
+  font: inherit;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1d6f6a;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) { background: #145652; }
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.delete-btn { background: #b42318; }
+.delete-btn:hover:not(:disabled) { background: #8f1c12; }
+
+:focus-visible {
+  outline: 1px solid #f0b429;
+  outline-offset: 2px;
+}
+
+/* Status messages: loading, success and error look different */
+#status {
+  margin: 1rem 0;
+  padding: 0.6rem 0.9rem;
+  min-height: 2.6rem;
+  border-radius: 6px;
+  border-left: 5px solid transparent;
+}
+
+#status.loading {
+  background: #e8f1fb;
+  border-left-color: #2b6cb0;
+  color: #1a4971;
+}
+
+#status.success {
+  background: #e3f6e8;
+  border-left-color: #2f855a;
+  color: #1c5a3a;
+}
+
+#status.error {
+  background: #fde8e6;
+  border-left-color: #b42318;
+  color: #8f1c12;
+  font-weight: 600;
+}
+
+/* Form */
+form {
+  background: #fff;
+  border: 1px solid #d5dbe1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.9rem;
+}
+
+label { font-weight: 600; }
+
+input,
+textarea {
+  font: inherit;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #b8c1cc;
+  border-radius: 6px;
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+#notes-list li {
+  background: #fff;
+  border: 1px solid #d5dbe1;
+  border-left: 4px solid #1d6f6a;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+}
+
+#notes-list h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+#notes-list p {
+  margin: 0 0 0.75rem;
+  color: #52606d;
+}
+
+#notes-list li.empty {
+  border-left-color: #b8c1cc;
+  color: #52606d;
+  text-align: center;
+}
