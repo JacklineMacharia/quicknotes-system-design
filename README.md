@@ -26,9 +26,9 @@ Note: JSONPlaceholder does not really save new notes or delete old ones, so the 
 
 ## Documents
 
-- [API design](docs/api-design.md) - the endpoints, examples and error codes for the real QuickNotes API
-- [Data model](docs/data-model.md) - the tables, relationships, SQL, index and SQL vs NoSQL choice
-- [Architecture](docs/architecture.md) - requirements, load estimates, diagram, request flows and trade-offs
+- [API design](/api-design.md) - the endpoints, examples and error codes for the real QuickNotes API
+- [Data model](/data-model.md) - the tables, relationships, SQL, index and SQL vs NoSQL choice
+- [Architecture](/architecture.md) - requirements, load estimates, diagram, request flows and trade-offs
 
 ## What I learned
 
@@ -38,3 +38,6 @@ Note: JSONPlaceholder does not really save new notes or delete old ones, so the 
 - How to estimate load (reads and writes per second, storage per year) and use it to decide what a system needs, such as a cache and a read replica for a read-heavy app.
 - How to design for scale and reliability with a CDN, load balancer, several app servers, a cache, a read replica and a queue, and how to avoid single points of failure.
 - Why user text must be inserted with `textContent` and not `innerHTML`, to keep the page safe.
+
+
+Author: Jackline N.M 😎
