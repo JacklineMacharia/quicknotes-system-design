@@ -153,3 +153,5 @@
 - **Database:** the primary has a read replica that can be promoted if the primary fails, and we take regular backups.
 - **Queue and workers:** use a replicated queue and several workers. A job that fails stays in the queue and is retried.
 - **Monitoring and health checks:** detect failures quickly so failed parts are replaced automatically.
+
+Author: Jackline N.M 😎
