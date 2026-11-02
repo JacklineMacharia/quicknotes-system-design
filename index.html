@@ -9,7 +9,7 @@
 </head>
 <body>
   <main>
-    <h1>QuickNotes</h1>
+    <h1>📝QuickNotes</h1>
     <p class="subtitle">API client practice with JSONPlaceholder</p>
 
     <button id="load-btn" type="button">Load notes</button>
@@ -18,13 +18,13 @@
 
     <form id="note-form" novalidate>
       <div class="field">
-        <label for="title-input">Title (required, max 100 characters)</label>
-        <input id="title-input" name="title" type="text" autocomplete="off">
+        <label for="title-input" >Title (max 100 characters).</label>
+        <input id="title-input" name="title" type="text" placeholder="Code & Coffee..." autocomplete="off">
       </div>
 
       <div class="field">
         <label for="body-input">Description.</label>
-        <textarea id="body-input" name="body" rows="4"></textarea>
+        <textarea id="body-input" name="body" rows="4" placeholder="Give details on title above..."></textarea>
       </div>
 
       <button id="submit-btn" type="submit">Add note</button>
