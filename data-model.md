@@ -130,3 +130,5 @@ CREATE INDEX idx_notes_user_created ON notes (user_id, created_at DESC);
 ## SQL or NoSQL?
 
 I would choose **SQL** (PostgreSQL) for QuickNotes. The data is clearly structured and connected: users own notes, and notes have tags through a many-to-many relationship. A relational database handles these relationships with foreign keys and joins, and it keeps the data correct, for example by making sure a note always belongs to a real user and that deleting a user also removes their notes. Queries such as "all notes with this tag" or "notes per tag" are natural in SQL. The load is also modest for a relational database: about 40 reads and 10 writes per second on average for 1 million users, which one primary database with a read replica can handle. A NoSQL document database such as MongoDB could store each note with its tags inside one document, which is simple, but it makes cross-note queries and consistency harder, and we do not need its main strength of scaling writes across many servers.
+
+Author: Jackline N.M
